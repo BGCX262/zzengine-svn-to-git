@@ -1,0 +1,82 @@
+﻿<Window x:Class="TinyLogQuery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TinyLogQuery"
+        Title="Query-TinyLog System" Height="640" Width="800"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True" 
+        WindowStyle="None" BorderThickness="2" BorderBrush="White"
+        Background="{DynamicResource AeroStyleBrush}" 
+        Icon="/TinyLogQuery;component/Image/system.png" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="AeroStyleBrush" EndPoint="0.972,0.981" StartPoint="0.025,0.044">
+            <GradientStop Color="#60A2A2A2" Offset="0"/>
+            <GradientStop Color="#4CA2A2A2" Offset="1"/>
+            <GradientStop Color="#60B4B4B4" Offset="0.246"/>
+            <GradientStop Color="#60FFFFFF" Offset="0.392"/>
+            <GradientStop Color="#60E7E7E7" Offset="0.703"/>
+            <GradientStop Color="#60FFFFFF" Offset="0.828"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition Height="48" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DockPanel VerticalAlignment="Center" LastChildFill="False">
+            <Button x:Name="CloseButton" DockPanel.Dock="Right" Background="{x:Null}" Margin="0,0,4,0" ToolTip="关闭" Click="CloseButton_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Image Width="18" Height="18" Source="/TinyLogQuery;component/Image/close.png" />
+            </Button>
+
+            <Button x:Name="MaxiButton" DockPanel.Dock="Right" Background="{x:Null}" Margin="0,0,4,0" ToolTip="最大化" Click="MaxiButton_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Image Source="/TinyLogQuery;component/Image/max.png" Width="18" Height="18"/>
+            </Button>
+
+            <Button x:Name="MiniButton" DockPanel.Dock="Right" Background="{x:Null}" Margin="0,0,4,0" ToolTip="最小化" Click="MiniButton_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Image Source="/TinyLogQuery;component/Image/min.png" Width="18" Height="18"/>
+            </Button>
+
+            <Image x:Name="SysImage" Width="20" Height="20" Margin="2,2,8,0" DockPanel.Dock="Left" Source="/TinyLogQuery;component/Image/system.png">
+                <Image.Effect>
+                    <DropShadowEffect />
+                </Image.Effect>
+            </Image>
+
+            <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center"><Run Text="Query - TinyLog System"/></TextBlock>
+        </DockPanel>
+
+        <DockPanel Grid.Row="1" VerticalAlignment="Center" LastChildFill="False">
+            <Label DockPanel.Dock="Left" Background="{DynamicResource AeroStyleBrush}"
+                   BorderThickness="2" BorderBrush="White" Margin="24,4">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="OpenButton" DockPanel.Dock="Right" Background="{x:Null}" Margin="0,0,4,0" ToolTip="打开Log文件" Click="OpenButton_Click">
+                        <Image Source="/TinyLogQuery;component/Image/open.png" Width="20" Height="24"/>
+                    </Button>
+
+                    <Button x:Name="AttachButton" DockPanel.Dock="Right" Background="{x:Null}" Margin="0,0,4,0" ToolTip="附加程序">
+                        <Image Source="/TinyLogQuery;component/Image/attach.png" Width="20" Height="24"/>
+                    </Button>
+                </StackPanel>
+            </Label>
+        </DockPanel>
+        
+        <TabControl Grid.Row="2" Margin="8,0,8,8" x:Name="SysTabControl">
+            <!--<TabItem>
+                <TabItem.Header>
+                    <local:TabItemHeader />
+                </TabItem.Header>
+                <local:TinyLogUnit />
+            </TabItem>-->
+        </TabControl>
+    </Grid>
+</Window>

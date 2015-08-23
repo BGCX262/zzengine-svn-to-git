@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TinyFS", "TinyFS\TinyFS.vcproj", "{CD93AA9C-5FA7-40DF-ADE9-24F80BAEAD85}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestTinyFS", "TestTinyFS\TestTinyFS.vcproj", "{D0684750-E945-4A2F-87A7-6AA813B9032E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD93AA9C-5FA7-40DF-ADE9-24F80BAEAD85}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD93AA9C-5FA7-40DF-ADE9-24F80BAEAD85}.Debug|Win32.Build.0 = Debug|Win32
+		{CD93AA9C-5FA7-40DF-ADE9-24F80BAEAD85}.Release|Win32.ActiveCfg = Release|Win32
+		{CD93AA9C-5FA7-40DF-ADE9-24F80BAEAD85}.Release|Win32.Build.0 = Release|Win32
+		{D0684750-E945-4A2F-87A7-6AA813B9032E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0684750-E945-4A2F-87A7-6AA813B9032E}.Debug|Win32.Build.0 = Debug|Win32
+		{D0684750-E945-4A2F-87A7-6AA813B9032E}.Release|Win32.ActiveCfg = Release|Win32
+		{D0684750-E945-4A2F-87A7-6AA813B9032E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="TinyLogQuery.TinyLogUnit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>        
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1.2*" />
+                <ColumnDefinition Width="1.2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1.2*" />
+            </Grid.ColumnDefinitions>
+            
+            <DockPanel Grid.Column="0" LastChildFill="False" VerticalAlignment="Top">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Gray">
+                    Log标识符
+                </TextBlock>
+                <RadioButton DockPanel.Dock="Top" Margin="10,4,4,2" GroupName="LogTag" IsChecked="True"
+                             x:Name="LogTagAllRadioButton">
+                    全部
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,2,4,2" GroupName="LogTag"
+                             x:Name="LogTagFFFRadioButton">
+                    0xFFF
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,2,4,2" GroupName="LogTag"
+                             x:Name="LogTagFFERadioButton">
+                    0xFFE
+                </RadioButton>
+            </DockPanel>
+
+            <DockPanel Grid.Column="1" LastChildFill="False" VerticalAlignment="Top">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Gray">
+                    时间
+                </TextBlock>
+                <RadioButton DockPanel.Dock="Top" Margin="10,4,4,2" GroupName="Time" IsChecked="True"
+                             x:Name="TimeAllRadioButton">
+                    全部
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,2,4,2" GroupName="Time"
+                             x:Name="TimeUserRadioButton">
+                    自定义
+                </RadioButton>
+                <StackPanel DockPanel.Dock="Top" Margin="20,2,4,2" Orientation="Horizontal">
+                    <TextBox Height="16" Width="32" FontSize="10" x:Name="TimeYearTextBox">1900</TextBox>
+                    <TextBlock>-</TextBlock>
+                    <TextBox Height="16" Width="20" FontSize="10" x:Name="TimeMonthTextBox">01</TextBox>
+                    <TextBlock>-</TextBlock>
+                    <TextBox Height="16" Width="20" FontSize="10" x:Name="TimeDayTextBox">01</TextBox>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Margin="20,2,4,2" Orientation="Horizontal">
+                    <TextBox Height="16" Width="20" FontSize="10" x:Name="TimeHourTextBox">00</TextBox>
+                    <TextBlock>:</TextBlock>
+                    <TextBox Height="16" Width="20" FontSize="10" x:Name="TimeMinuterTextBox">00</TextBox>
+                    <TextBlock>:</TextBlock>
+                    <TextBox Height="16" Width="20" FontSize="10" x:Name="TimeSecondTextBox">00</TextBox>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel Grid.Column="2" LastChildFill="False" VerticalAlignment="Top">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Gray">
+                    分类
+                </TextBlock>
+                <RadioButton DockPanel.Dock="Top" Margin="10,4,4,2" GroupName="Classify" IsChecked="True"
+                             x:Name="ClassifyAllRadioButton">
+                    全部
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,2,4,2" GroupName="Classify"
+                             x:Name="ClassifyUserRadioButton">
+                    自定义
+                </RadioButton>
+                <StackPanel DockPanel.Dock="Top" Margin="20,2,4,2" Orientation="Horizontal">
+                    <TextBox x:Name="ClassifyTextBox" Width="80">All</TextBox>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Grid.Column="3" LastChildFill="False" VerticalAlignment="Top">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Gray">
+                    优先级
+                </TextBlock>
+                <RadioButton DockPanel.Dock="Top" Margin="10,4,4,0" GroupName="Priority" IsChecked="True"
+                             x:Name="PriorityAllRadioButton">
+                    全部
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,0,4,0" GroupName="Priority"
+                             x:Name="PriorityErrorRadioButton">
+                    Error
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,0,4,0" GroupName="Priority"
+                             x:Name="PriorityWarningRadioButton">
+                    Warning
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,0,4,0" GroupName="Priority"
+                             x:Name="PriorityInfoRadioButton">
+                    Info
+                </RadioButton>
+                <RadioButton DockPanel.Dock="Top" Margin="10,0,4,0" GroupName="Priority"
+                             x:Name="PriorityDebugRadioButton">
+                    Debug
+                </RadioButton>
+            </DockPanel>
+
+            <DockPanel Grid.Column="4" LastChildFill="False" VerticalAlignment="Top">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Gray">
+                    高级
+                </TextBlock>
+                <TextBlock DockPanel.Dock="Top">
+                    Log产生原因:
+                </TextBlock>
+                <TextBox DockPanel.Dock="Top" Height="16" FontSize="10" x:Name="AdvanceConditionTextBox">CONDITION_ERROR</TextBox>
+                <TextBlock DockPanel.Dock="Top">
+                    代码行数:
+                </TextBlock>
+                <TextBox DockPanel.Dock="Top" Height="16" FontSize="10" x:Name="AdvanceLineTextBox">-1</TextBox>
+                <TextBlock DockPanel.Dock="Top">
+                    Log信息:
+                </TextBlock>
+                <TextBox DockPanel.Dock="Top" Height="16" FontSize="10" x:Name="AdvanceInfoTextBox"></TextBox>
+                <Button Height="20" HorizontalAlignment="Center" x:Name="AdvanceButton">
+                    筛选
+                </Button>
+            </DockPanel>
+        </Grid>
+        
+        <TextBox Grid.Row="1" x:Name="LogTextBox" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            
+        </TextBox>
+    </Grid>
+</UserControl>

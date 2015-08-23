@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Person>
+    <Sex Type="bool" Value="True" />
+    <Name Type="string" Value="Lilei" />
+    <Height Type="float" Value="175.5" />
+    <Father>
+        <Age Type="int" Value="48" />
+        <Name Type="string" Value="LiGang" />
+    </Father>
+    <Weight Type="float" Value="65.1999969482422" />
+    <Nation Type="string" Value="Chinese" />
+    <Mother>
+        <Age Type="int" Value="54" />
+        <Name Type="string" Value="HanMeimei" />
+        <体重 Type="double" Value="43.254" />
+    </Mother>
+</Person>

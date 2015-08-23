@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tfs-config>
+    <Environment Direction="E:\快盘\TinyFS\TestTinyFS" />
+    <OpenList>
+        <Element Path="D:\TinyFS\product\test.tfs" />
+    </OpenList>
+</tfs-config>
